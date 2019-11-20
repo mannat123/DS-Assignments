@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Duplicate
+class Frequency
 {
 public static void main(String args[])
 {
