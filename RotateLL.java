@@ -43,13 +43,13 @@ public class RotateLL
             temp=temp.next;
             count++;
         }
-        Node kNode=temp.next;
+        Node kthNode=temp.next;
         while(curr.next!=null)
         {
             curr=curr.next;
         }
         curr.next=l.head;
-        head=kNode;
+        head=kthNode;
         temp.next=null;
     }
     
