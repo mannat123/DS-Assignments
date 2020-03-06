@@ -1,7 +1,24 @@
 public class Window {
 
-	public static void main(String args[])
-	{
+	public static void windowSize(int a[],int n,int k) {
+		
+		for(int i=0;i<=n-k;i++) {
+			
+			int max=0;
+			
+			for(int j=i;j<i+k;j++) {
+				
+				if(max<a[j])
+					max=a[j];
+			}
+			System.out.print(max+" ");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
 		int n,k;
 		Scanner sc=new Scanner(System.in);
 		n=sc.nextInt();
@@ -11,24 +28,9 @@ public class Window {
 		{
 			arr[i]=sc.nextInt();
 		}
-		for(int i=0;i<n-k+1;i++)
-		{
-			Max(arr[i],arr[i+1],arr[i+2]);
-		}
-	}
-
-	public static void Max(int i, int j, int k) {
-		if(i>=j&&i>=k)
-		{
-			System.out.println(i+" ");
-		}
-		else if(j>=i&&j>=k)
-		{
-			System.out.println(j+" ");
-		}
-		else
-		{
-			System.out.println(k+" ");
-		}
+		
+			windowSize(arr,n,k);
+		
+	
 	}
 }
